@@ -34,3 +34,8 @@ Route::apiResource('/productos', ProductoController::class);
 // Registro
 Route::post('/registro', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+
+// Test de arranque
+// Route::get('/hola', function () {
+//     return response()->json(['saludo' => 'Hola de vuelta']);
+// });
