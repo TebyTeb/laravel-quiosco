@@ -24,12 +24,16 @@ Route::middleware('auth:sanctum')->group(function () {
     });
     Route::post('/logout', [AuthController::class, 'logout']);
 
-    // Almacenar órdenes
+    // Recurso de Pedidos
     Route::apiResource('/pedidos', PedidoController::class);
+
+    // Recurso de Categorías
+    Route::apiResource('/categorias', CategoriaController::class);
+
+    // Recurso de Productos
+    Route::apiResource('/productos', ProductoController::class);
 });
 
-Route::apiResource('/categorias', CategoriaController::class);
-Route::apiResource('/productos', ProductoController::class);
 
 // Registro
 Route::post('/registro', [AuthController::class, 'register']);
